@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/simplefeedback/static/css/main.742e6506.css",
+    "main.js": "/simplefeedback/static/js/main.e6e06716.js",
+    "index.html": "/simplefeedback/index.html",
+    "main.742e6506.css.map": "/simplefeedback/static/css/main.742e6506.css.map",
+    "main.e6e06716.js.map": "/simplefeedback/static/js/main.e6e06716.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.742e6506.css",
+    "static/js/main.e6e06716.js"
+  ]
+}
