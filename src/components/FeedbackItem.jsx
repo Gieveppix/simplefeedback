@@ -1,19 +1,13 @@
 import React from 'react'
-import {useState} from 'react'
+import Card from './shared/Card';
 
-function FeedbackItem() {
-
-        const [rating, setRating] = useState(7)
-        const [text, setText] = 
-        useState('This is an example of an feedback item')
-
-    
+function FeedbackItem({ item }) {
     return (
-        <div className='card'>
-            <div className="num-display">{rating}</div>
-            <div className="text-dislay">{text}</div>
-        </div>
+        <Card>
+            <div className="num-display">{item.rating}</div>
+            <div className="text-dislay">{item.text}</div>
+        </Card>
   )
 }
 
-export default FeedbackItem
+export default FeedbackItem;
