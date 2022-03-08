@@ -37,7 +37,7 @@ function App() {
                         </> 
                     }> 
                     </Route>
-                    <Route path='/about' element={<AboutPage/>} />
+                    <Route exact path='/simplefeedback/about' element={<AboutPage/>} />
                 </Routes>
                 <AboutIconLink/>
             </div>
