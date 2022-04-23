@@ -17,7 +17,7 @@ function App() {
             <Header/>
             <div className='container'>
                 <Routes>
-                    <Route exact path='/simplefeedback/' element={
+                    <Route exact path='/' element={
                         <>
                             <FeedbackForm />
                             <FeedbackStats />
@@ -25,7 +25,7 @@ function App() {
                         </> 
                     }> 
                     </Route>
-                    <Route exact path='/simplefeedback/about' element={<AboutPage/>} />
+                    <Route exact path='/about' element={<AboutPage/>} />
                 </Routes>
                 <AboutIconLink/>
             </div>
