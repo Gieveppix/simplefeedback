@@ -1,5 +1,5 @@
 {
-  "homepage": "/simplefeedback/",
+  "homepage": "./simplefeedback/",
   "name": "simplefeedback",
   "version": "0.1.0",
   "private": true,
