@@ -1,9 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import Card from './shared/Card'
 import Button from './shared/Button'
 import RatingSelect from './RatingSelect'
-import { useContext } from 'react'
 import FeedbackContext from '../context/FeedbackContext'
 
 function FeedbackForm() {
@@ -12,12 +11,20 @@ function FeedbackForm() {
     const [btnDisabled, setBtnDisabled] = useState(true)
     const [message, setMessage] = useState('')
 
-    const { addFeedback }  = useContext(FeedbackContext)
+    const { addFeedback, feedbackEdit, updateFeedback }  = useContext(FeedbackContext)
+
+    useEffect(() => {
+        if(feedbackEdit.edit ===true) {
+            setBtnDisabled(false)
+            setText(feedbackEdit.item.text)
+            setRating(feedbackEdit.item.rating)
+        }
+    }, [feedbackEdit])
 
     const handleTextChange = (e) => { //event
         if(text === '') {
             setBtnDisabled(true)
-            setMessage(null)
+            setMessage(null  )
         } else if(text !== '' && text.trim().length <= 8) {
             setMessage('Text must be at least 10 characters long')
             setBtnDisabled(true)
@@ -32,11 +39,19 @@ function FeedbackForm() {
         e.preventDefault()
         if(text.trim().length > 8) {
             const newFeedback = {
-                text: text,
+                text,
                 rating
             }
+
+            if(feedbackEdit.edit === true) {
+                updateFeedback(feedbackEdit.item.id, newFeedback)
+            } else {
             addFeedback(newFeedback)
-            setText('') //Doesnt work
+            }
+            setBtnDisabled(true)
+            setRating(10)
+            setText('')
+
         }
     }
 
