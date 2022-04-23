@@ -2,7 +2,6 @@ import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useContext } from 'react'
 import FeedbackItem from './FeedbackItem'
-//import PropTypes from 'prop-types'
 import FeedbackContext from '../context/FeedbackContext'
 
 function FeedbackList() {
@@ -42,15 +41,5 @@ const { feedback }  = useContext(FeedbackContext)
     //     </div>
     // )
 }
-
-// FeedbackList.propTypes = {
-//     feedback: PropTypes.arrayOf(
-//         PropTypes.shape({
-//         id: PropTypes.string.isRequired, //changed because of uuid
-//         text: PropTypes.string.isRequired,
-//         rating: PropTypes.number.isRequired,
-//         })
-//     )
-// } I can delete this
 
 export default FeedbackList;

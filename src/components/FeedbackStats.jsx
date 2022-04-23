@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { useContext } from 'react'
 import FeedbackContext from '../context/FeedbackContext'
 
@@ -22,9 +21,5 @@ function FeedbackStats() {
     </div>
   )
 }
-
-// FeedbackStats.prop Types = {
-//     feedback: PropTypes.array.isRequired,
-// } I can delete this
 
 export default FeedbackStats
